@@ -58,7 +58,8 @@ const camelCaseObject = convertKeysToCamelCase(jsonData);
 
 // Helper function to replace specific characters in a string with '-'
 function replaceCharacters(str) {
-    return str.replace(/[(),-\.]/g, '_');
+    // return str.replace(/[(),-\.]/g, '_');
+    return str.replace(/\W/g, '_');
 }
 
 // Function to convert object keys by replacing specific characters
