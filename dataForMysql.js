@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const filePath = `./rexroth_high_precision_ball_runner_blocks_BSHP_for_mysql.json`;
-const filePathOriginalKey = `./rexroth_high_precision_ball_runner_blocks_BSHP_original_key.json`;
+const filePath = `rexroth_high_precision_ball_runner_blocks_BSHP_for_mysql.json`;
+const filePathOriginalKey = `rexroth_high_precision_ball_runner_blocks_BSHP_original_key.json`;
 
 let mysqlColumns={}
 let mysqlColumnsComments={}

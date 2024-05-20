@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const folderPath = `../rexroth_high_precision_ball_runner_blocks_BSHP`;
+const folderPath = `rexroth_high_precision_ball_runner_blocks_BSHP`;
 
 let allProducts=[]
 let originalKeyProducts=[]
@@ -62,12 +62,22 @@ function replaceCharacters(str) {
     return str.replace(/\W/g, '_');
 }
 
+function addUnderscoreIfStartsWithNumber(str) {
+    // Use a regular expression to check if the first character is a digit
+    if (/^\d/.test(str)) {
+        return '_' + str;
+    }
+    return str;
+}
+
 // Function to convert object keys by replacing specific characters
 function convertKeys(obj) {
     const newObj = {};
     for (const key in obj) {
         if (obj.hasOwnProperty(key)) {
-            const newKey = replaceCharacters(key);
+            let newKey = replaceCharacters(key);
+            newKey=addUnderscoreIfStartsWithNumber(newKey)
+            if(newKey.length>63) newKey=newKey.slice(0, 63);
             newObj[newKey] = obj[key];
         }
     }
@@ -82,8 +92,10 @@ const newObject = convertKeys(camelCaseObject);
 
                             allProducts.push(newObject)
                             originalKeyProducts.push(jsonData)
-                            fs.writeFileSync(`./${folderPath}_for_mysql.json`,JSON.stringify(allProducts))
-                            fs.writeFileSync(`./${folderPath}_original_key.json`,JSON.stringify(originalKeyProducts))
+                            console.log(allProducts.length)
+                            console.log(originalKeyProducts.length)
+                            fs.writeFileSync(`${folderPath}_for_mysql.json`,JSON.stringify(allProducts))
+                            fs.writeFileSync(`${folderPath}_original_key.json`,JSON.stringify(originalKeyProducts))
 
                         } catch (parseErr) {
                             console.error('Failed to parse JSON:', filePath, parseErr);
