@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const filePath = `./festo_compact_cylinder.json`;
-const filePathOriginalKey = `./festo_compact_cylinder_original_key.json`;
+const filePath = `./rexroth_high_precision_ball_runner_blocks_BSHP_for_mysql.json`;
+const filePathOriginalKey = `./rexroth_high_precision_ball_runner_blocks_BSHP_original_key.json`;
 
 let mysqlColumns={}
 let mysqlColumnsComments={}
@@ -34,7 +34,7 @@ fs.readFile(filePath, 'utf8', (err, data) => {
         console.log(templateColumns)
         let dataForMysql=jsonData.map(item=>({...templateColumns,...item}))
 
-        fs.writeFileSync('dataForMysql.json',JSON.stringify(dataForMysql))
+        fs.writeFileSync('rexroth_high_precision_ball_runner_blocks_BSHP_with_mysql_column_name.json',JSON.stringify(dataForMysql))
 
 
 

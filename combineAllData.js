@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const folderPath = `C:\\Users\\snh3sgh\\Downloads\\compact`;
+const folderPath = `../rexroth_high_precision_ball_runner_blocks_BSHP`;
 
 let allProducts=[]
 let originalKeyProducts=[]
@@ -82,8 +82,8 @@ const newObject = convertKeys(camelCaseObject);
 
                             allProducts.push(newObject)
                             originalKeyProducts.push(jsonData)
-                            fs.writeFileSync('festo_compact_cylinder.json',JSON.stringify(allProducts))
-                            fs.writeFileSync('festo_compact_cylinder_original_key.json',JSON.stringify(originalKeyProducts))
+                            fs.writeFileSync(`./${folderPath}_for_mysql.json`,JSON.stringify(allProducts))
+                            fs.writeFileSync(`./${folderPath}_original_key.json`,JSON.stringify(originalKeyProducts))
 
                         } catch (parseErr) {
                             console.error('Failed to parse JSON:', filePath, parseErr);

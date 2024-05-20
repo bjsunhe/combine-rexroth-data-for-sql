@@ -1,5 +1,6 @@
 ```sql
 
+
 CREATE TABLE `festo_compact_cylinder` (
   `stroke` VARCHAR(255) COMMENT 'Stroke',
   `pistonDiameter` VARCHAR(255) COMMENT 'Piston diameter',
@@ -53,6 +54,109 @@ CREATE TABLE `festo_compact_cylinder` (
   `additionalWeightPerPistonRodThreadExtensionOf10Mm` VARCHAR(255) COMMENT 'Additional weight per piston rod thread extension of 10 mm',
   `basedOnStandard` VARCHAR(255) COMMENT 'Based on standard',
   `cleanroomClass` VARCHAR(255) COMMENT 'Cleanroom class'
+);
+
+
+
+```
+
+
+
+
+```sql
+
+CREATE TABLE rexroth_high_precision_ball_runner_blocks_BSHP (
+    nominalSize_mm_ VARCHAR(255) COMMENT 'Nominal size [mm]',
+    format VARCHAR(255) COMMENT 'Format',
+    typeOfConstruction VARCHAR(255) COMMENT 'Type of construction',
+    ballChain VARCHAR(255) COMMENT 'Ball chain',
+    material_profiledRailSystems_ VARCHAR(255) COMMENT 'Material (profiled rail systems)',
+    preloadClass VARCHAR(255) COMMENT 'Preload class',
+    accuracyClass VARCHAR(255) COMMENT 'Accuracy class',
+    seal VARCHAR(255) COMMENT 'Seal',
+    self_aligningForCompensationOfMisalignments VARCHAR(255) COMMENT 'Self-aligning for compensation of misalignments',
+    widthOfRunnerBlock_mm_ VARCHAR(255) COMMENT 'Width of runner block [mm]',
+    lengthOfRunnerBlock_mm_ VARCHAR(255) COMMENT 'Length of runner block [mm]',
+    heightOfRunnerBlock_mm_ VARCHAR(255) COMMENT 'Height of runner block [mm]',
+    heightOfRunnerBlockWithGuideRail_mm_ VARCHAR(255) COMMENT 'Height of runner block with guide rail [mm]',
+    lubrication VARCHAR(255) COMMENT 'Lubrication',
+    dynamicLoadCapacityC_n_ VARCHAR(255) COMMENT 'Dynamic load capacity C [N]',
+    footnoteDynamicLoadCapacityC VARCHAR(255) COMMENT 'Footnote dynamic load capacity C',
+    staticLongitudinalMomentLoadCapacityMl0_nm_ VARCHAR(255) COMMENT 'Static longitudinal moment load capacity ML0 [Nm]',
+    staticTorsionalMomentLoadCapacityMt0_nm_ VARCHAR(255) COMMENT 'Static torsional moment load capacity Mt0 [Nm]',
+    max_AccelerationAmax_m_s__ VARCHAR(255) COMMENT 'Max. acceleration amax [m/s²]',
+    note_Max_AccelerationAmax VARCHAR(255) COMMENT 'Note: Max. acceleration amax',
+    maximumPermissibleLinearSpeedVmax_m_s_ VARCHAR(255) COMMENT 'Maximum permissible linear speed vmax [m/s]',
+    dynamicTorsionalMomentLoadCapacityMt_nm_ VARCHAR(255) COMMENT 'Dynamic torsional moment load capacity Mt [Nm]',
+    dynamicTorsionalMomentLoadCapacityMtFootnote VARCHAR(255) COMMENT 'Dynamic torsional moment load capacity Mt footnote',
+    dynamicLongitudinalMomentLoadCapacityMl_nm_ VARCHAR(255) COMMENT 'Dynamic longitudinal moment load capacity ML [Nm]',
+    dynamicLongitudinalMomentLoadCapacityMlFootnote VARCHAR(255) COMMENT 'Dynamic longitudinal moment load capacity ML footnote',
+    staticLoadRatingC0_n_ VARCHAR(255) COMMENT 'Static load rating C0 [N]',
+    permissibleAmbientTemperature VARCHAR(255) COMMENT 'Permissible ambient temperature',
+    footnotePermissibleAmbientTemperature_min___Max_ VARCHAR(255) COMMENT 'Footnote permissible ambient temperature (min ... max)',
+    frictionCoefficient_ VARCHAR(255) COMMENT 'Friction coefficient μ',
+    footnoteFrictionCoefficient_ VARCHAR(255) COMMENT 'Footnote friction coefficient μ',
+    version VARCHAR(255) COMMENT 'Version',
+    pitchTGuideRail_mm_ VARCHAR(255) COMMENT 'Pitch T guide rail [mm]',
+    weight_kg_ VARCHAR(255) COMMENT 'Weight [kg]',
+    dimensionA_profiledRailSystems__mm_ VARCHAR(255) COMMENT 'Dimension A (profiled rail systems) [mm]',
+    dimensionA1_profiledRailSystems__mm_ VARCHAR(255) COMMENT 'Dimension A1 (profiled rail systems) [mm]',
+    dimensionA2_profiledRailSystems__mm_ VARCHAR(255) COMMENT 'Dimension A2 (profiled rail systems) [mm]',
+    dimensionA3_profiledRailSystems__mm_ VARCHAR(255) COMMENT 'Dimension A3 (profiled rail systems) [mm]',
+    dimensionB_profiledRailSystems__mm_ VARCHAR(255) COMMENT 'Dimension B (profiled rail systems) [mm]',
+    dimensionBTolerance_profiledRailSystems__mm_ VARCHAR(255) COMMENT 'Dimension B tolerance (profiled rail systems) [mm]',
+    dimensionB1_mm_ VARCHAR(255) COMMENT 'Dimension B1 [mm]',
+    dimensionE1_profiledRailSystems__mm_ VARCHAR(255) COMMENT 'Dimension E1 (profiled rail systems) [mm]',
+    dimensionE2_profiledRailSystems__mm_ VARCHAR(255) COMMENT 'Dimension E2 (profiled rail systems) [mm]',
+    dimensionE8_profiledRailSystems__mm_ VARCHAR(255) COMMENT 'Dimension E8 (profiled rail systems) [mm]',
+    dimensionE9_profiledRailSystems__mm_ VARCHAR(255) COMMENT 'Dimension E9 (profiled rail systems) [mm]',
+    dimensionH_profiledRailSystem__mm_ VARCHAR(255) COMMENT 'Dimension H (profiled rail system) [mm]',
+    dimensionH1_profiledRailSystems__mm_ VARCHAR(255) COMMENT 'Dimension H1 (profiled rail systems) [mm]',
+    dimensionH2WithCoverStrip_profiledRailSystems__mm_ VARCHAR(255) COMMENT 'Dimension H2 with cover strip (profiled rail systems) [mm]',
+    dimensionH2WithoutCoverStrip_profiledRailSystems__mm_ VARCHAR(255) COMMENT 'Dimension H2 without cover strip (profiled rail systems) [mm]',
+    dimensionK1_profiledRailSystems__mm_ VARCHAR(255) COMMENT 'Dimension K1 (profiled rail systems) [mm]',
+    dimensionK2_profiledRailSystems__mm_ VARCHAR(255) COMMENT 'Dimension K2 (profiled rail systems) [mm]',
+    dimensionK3_profiledRailSystems__mm_ VARCHAR(255) COMMENT 'Dimension K3 (profiled rail systems) [mm]',
+    dimensionK4_profiledRailSystems__mm_ VARCHAR(255) COMMENT 'Dimension K4 (profiled rail systems) [mm]',
+    dimensionN3_profiledRailSystems__mm_ VARCHAR(255) COMMENT 'Dimension N3 (profiled rail systems) [mm]',
+    dimensionN6_profiledRailSystems__mm_ VARCHAR(255) COMMENT 'Dimension N6 (profiled rail systems) [mm]',
+    dimensionN6Tolerance_profiledRailSystems__mm_ VARCHAR(255) COMMENT 'Dimension N6 tolerance (profiled rail systems) [mm]',
+    dimensionS2_profiledRailSystems_ VARCHAR(255) COMMENT 'Dimension S2 (profiled rail systems)',
+    dimensionS5_profiledRailSystem__mm_ VARCHAR(255) COMMENT 'Dimension S5 (profiled rail system) [mm]',
+    dimensionS9ThreadDiameterXLead_profiledRailSystems__mm_ VARCHAR(255) COMMENT 'Dimension S9 thread diameter x lead (profiled rail systems) [mm]',
+    dimensionT1Min_profiledRailSystems__mm_ VARCHAR(255) COMMENT 'Dimension T1 min (profiled rail systems) [mm]',
+    dimensionV1_mm_ VARCHAR(255) COMMENT 'Dimension V1 [mm]',
+    dataSheet VARCHAR(255) COMMENT 'Data sheet',
+    operatingInstructions VARCHAR(255) COMMENT 'Operating instructions',
+    2dCad_0 VARCHAR(255) COMMENT '2D CAD_0',
+    2dCad_1 VARCHAR(255) COMMENT '2D CAD_1',
+    3dCad_2 VARCHAR(255) COMMENT '3D CAD_2',
+    3dCad_3 VARCHAR(255) COMMENT '3D CAD_3',
+    productlink VARCHAR(255) COMMENT 'Product link',
+    sealFootnote VARCHAR(255) COMMENT 'Seal footnote',
+    3dCad_1 VARCHAR(255) COMMENT '3D CAD_1',
+    2dCad_3 VARCHAR(255) COMMENT '2D CAD_3',
+    3dCad_0 VARCHAR(255) COMMENT '3D CAD_0',
+    2dCad_2 VARCHAR(255) COMMENT '2D CAD_2',
+    dimensionE3_profiledRailSystems__mm_ VARCHAR(255) COMMENT 'Dimension E3 (profiled rail systems) [mm]',
+    dimensionE8_1_profiledRailSystems__mm_ VARCHAR(255) COMMENT 'Dimension E8.1 (profiled rail systems) [mm]',
+    dimensionE9_1_profiledRailSystems__mm_ VARCHAR(255) COMMENT 'Dimension E9.1 (profiled rail systems) [mm]',
+    maximumDynamicLoadFmax_n_ VARCHAR(255) COMMENT 'Maximum dynamic load Fmax [N]',
+    maximumPermissibleTorsionalMomentMtMax_nm_ VARCHAR(255) COMMENT 'Maximum permissible torsional moment Mt max [Nm]',
+    maximumPermissibleLongitudinalLoadMomentMlMax_nm_ VARCHAR(255) COMMENT 'Maximum permissible longitudinal load moment ML max [Nm]',
+    dimensionN1_profiledRailSystems__mm_ VARCHAR(255) COMMENT 'Dimension N1 (profiled rail systems) [mm]',
+    dimensionN2_profiledRailSystems__mm_ VARCHAR(255) COMMENT 'Dimension N2 (profiled rail systems) [mm]',
+    dimensionN4_profiledRailSystems__mm_ VARCHAR(255) COMMENT 'Dimension N4 (profiled rail systems) [mm]',
+    dimensionS1_profiledRailSystems__mm_ VARCHAR(255) COMMENT 'Dimension S1 (profiled rail systems) [mm]',
+    dimensionS11_profiledRailSystems__mm_ VARCHAR(255) COMMENT 'Dimension S11 (profiled rail systems) [mm]',
+    massM_g_ VARCHAR(255) COMMENT 'Mass m [g]',
+    3dCad_4 VARCHAR(255) COMMENT '3D CAD_4',
+    sizeFootnote VARCHAR(255) COMMENT 'Size footnote',
+    dimensionH2_profiledRailSystems__mm_ VARCHAR(255) COMMENT 'Dimension H2 (profiled rail systems) [mm]',
+    dimensionS9ThreadDiameterXLeadWithTolerance_profiledRailSystems__mm_ VARCHAR(255) COMMENT 'Dimension S9 thread diameter x lead with tolerance (profiled rail systems) [mm]',
+    2dCad_dwg__2 VARCHAR(255) COMMENT '2D CAD (DWG)_2',
+    2dCad_dxf__3 VARCHAR(255) COMMENT '2D CAD (DXF)_3',
+    heightOfGuideRailH2WithCoverStrip_mm_ VARCHAR(255) COMMENT 'Height of guide rail H2 with cover strip [mm]'
 );
 
 
