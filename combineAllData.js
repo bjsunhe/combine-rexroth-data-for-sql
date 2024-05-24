@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const folderPath = `rexroth_high_precision_ball_runner_blocks_BSHP`;
+const folderPath = `Montagetechnik_Kettenfoerdersystem-VarioFlow-plus_VarioFlow-plus-Aluminiumsystem_Strecke-AL-Gleitleiste`;
 
 let allProducts=[]
 let originalKeyProducts=[]
@@ -23,7 +23,9 @@ function readJSONFiles(directory) {
     
                         try {
                             const jsonData = JSON.parse(data);
-                            
+                            if(Array.isArray(jsonData)){
+                                return
+                            }
                             
                                 // Helper function to convert a string to camelCase
 function toCamelCase(str) {
